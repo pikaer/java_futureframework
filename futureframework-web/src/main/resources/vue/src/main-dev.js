@@ -7,7 +7,7 @@ import store from './store'
 // axios
 import './dependences/axios.js'
 // v-charts
-import './dependences/vcharts.js'
+// import './dependences/vcharts.js'
 // element-ui
 import './plugins/element.js'
 // 导入全局样式表
