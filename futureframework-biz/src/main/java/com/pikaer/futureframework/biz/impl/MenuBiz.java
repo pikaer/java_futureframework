@@ -15,18 +15,29 @@ public class MenuBiz implements IMenuBiz {
     @Override
     public MenuResponse getMenuList() {
         List<MenuInfo> menuList = new ArrayList<>();
-
-        MenuInfo systemMenu = new MenuInfo(100, "系统管理", "", "fa fa-wrench");
-        MenuInfo usersSubMenu = new MenuInfo(101, "用户管理", "users", "fa fa-user");
-        MenuInfo rolesSubMenu = new MenuInfo(102, "角色管理", "roles", "fa fa fa-id-card");
-        MenuInfo rightsSubMenu = new MenuInfo(103, "权限管理", "rights", "fa fa-cog");
-        systemMenu.setSubMenuList(Lists.newArrayList(usersSubMenu, rolesSubMenu, rightsSubMenu));
-
-        menuList.add(systemMenu);
-
+        menuList.add(getSysMenu());
+        menuList.add(getLogMenu());
         MenuResponse response = new MenuResponse();
         response.setCodeAndMsg(ResponseCodeEnum.SUCCESS.getCode(), ResponseCodeEnum.SUCCESS.getMsg());
         response.setMenuList(menuList);
         return response;
     }
+
+    private MenuInfo getSysMenu(){
+        MenuInfo systemMenu = new MenuInfo(100, "系统管理", "", "fa fa-wrench");
+        MenuInfo usersSubMenu = new MenuInfo(101, "用户管理", "users", "fa fa-user");
+        MenuInfo rolesSubMenu = new MenuInfo(102, "角色管理", "roles", "fa fa fa-id-card");
+        MenuInfo rightsSubMenu = new MenuInfo(103, "权限管理", "rights", "fa fa-cog");
+        systemMenu.setSubMenuList(Lists.newArrayList(usersSubMenu, rolesSubMenu, rightsSubMenu));
+        return systemMenu;
+    }
+
+    private MenuInfo getLogMenu(){
+        MenuInfo logMenu = new MenuInfo(200, "日志管理", "", "fa fa-cogs");
+        MenuInfo systemLog = new MenuInfo(201, "系统日志", "systemlog", "fa fa-bug");
+        MenuInfo serviceLog = new MenuInfo(202, "接口调用", "servicelog", "fa fa fa-line-chart");
+        logMenu.setSubMenuList(Lists.newArrayList(systemLog, serviceLog));
+        return logMenu;
+    }
+
 }

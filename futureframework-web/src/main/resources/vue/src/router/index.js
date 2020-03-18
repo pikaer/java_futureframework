@@ -10,6 +10,8 @@ const Home = () => import(/* webpackChunkName: "home" */ '../components/Home.vue
 const Users = () => import(/* webpackChunkName: "users_roles_rights" */ '../components/system/Users.vue')
 const Roles = () => import(/* webpackChunkName: "users_roles_rights" */ '../components/system/Roles.vue')
 const Rights = () => import(/* webpackChunkName: "users_roles_rights" */ '../components/system/Rights.vue')
+const ServiceLog = () => import(/* webpackChunkName: "users_logs_rights" */ '../components/log/ServiceLog.vue')
+const SystemLog = () => import(/* webpackChunkName: "users_logs_rights" */ '../components/log/SystemLog.vue')
 
 Vue.use(VueRouter)
 
@@ -27,7 +29,9 @@ const routes = [
         children: [
             { path: '/users', component: Users },
             { path: '/roles', component: Roles },
-            { path: '/rights', component: Rights }
+            { path: '/rights', component: Rights },
+            { path: '/servicelog', component: ServiceLog },
+            { path: '/systemlog', component: SystemLog }
         ]
     }
 ]
