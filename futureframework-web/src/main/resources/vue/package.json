@@ -13,6 +13,7 @@
     "echarts": "^4.6.0",
     "element-ui": "^2.13.0",
     "jshint": "^2.11.0",
+    "less": "^3.11.1",
     "nprogress": "^0.2.0",
     "v-charts": "^1.19.0",
     "vue": "^2.6.11",
@@ -26,6 +27,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "less-loader": "^5.0.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
@@ -42,7 +44,8 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+    }
   },
   "browserslist": [
     "> 1%",

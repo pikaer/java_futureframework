@@ -107,7 +107,7 @@
                 var that = this
                 //  { data: response }表示把响应json中的data解析出来，并且重命名为response
                 this.$http.get('menu/getMenuList').then(function({ data: response }) {
-                    if (response.code === 1) {
+                    if (response.code === 0) {
                         // axios回调函数中的this已经改变，无法访问到data中的数据，解决：把this保存起来，回调函数中直接使用保存的this即可
                         that.menuList = response.menuList
                     } else {
