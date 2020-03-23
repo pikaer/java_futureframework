@@ -12,6 +12,7 @@
     <groupId>com.pikaer</groupId>
     <artifactId>futureframework-web</artifactId>
     <version>0.0.1</version>
+
     <dependencies>
         <dependency>
             <groupId>com.pikaer</groupId>

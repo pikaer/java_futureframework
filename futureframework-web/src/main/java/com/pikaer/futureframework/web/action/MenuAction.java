@@ -13,11 +13,6 @@ public class MenuAction {
     @Autowired
     private IMenuBiz menuBiz;
 
-    /**
-     * desc : 获取菜单list
-     * create_user : cheng
-     * create_date : 2020/3/11 19:12
-     */
     @RequestMapping(value = "/getMenuList")
     public MenuResponse getMenuList() {
         return menuBiz.getMenuList();
