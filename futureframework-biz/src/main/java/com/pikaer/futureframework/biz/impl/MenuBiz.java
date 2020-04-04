@@ -8,7 +8,6 @@ import com.pikaer.futureframework.entity.utils.ResponseCodeEnum;
 import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +21,6 @@ public class MenuBiz implements IMenuBiz {
     @Override
     public MenuResponse getMenuList() {
         List<MenuInfo> menuList = new ArrayList<>();
-        int count=menuInfoDao.count();
         menuList.add(getSysMenu());
         menuList.add(getLogMenu());
         MenuResponse response = new MenuResponse();

@@ -8,6 +8,7 @@
         <module>futureframework-entity</module>
         <module>futureframework-biz</module>
         <module>futureframework-web</module>
+        <module>futureframework-utils</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
