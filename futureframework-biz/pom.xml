@@ -14,15 +14,28 @@
     <version>0.0.1</version>
     <dependencies>
         <dependency>
-            <groupId>com.pikaer</groupId>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pikaer.futureframework</groupId>
             <artifactId>futureframework-entity</artifactId>
             <version>0.0.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
+            <groupId>com.pikaer.futureframework</groupId>
+            <artifactId>futureframework-entity</artifactId>
+            <version>0.0.1</version>
+            <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.pikaer</groupId>
+            <artifactId>futureframework-dal</artifactId>
+            <version>0.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
 

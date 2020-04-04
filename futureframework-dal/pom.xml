@@ -8,18 +8,10 @@
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>futureframework-dal</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
-        </dependency>
-    </dependencies>
+    <groupId>com.pikaer</groupId>
+    <artifactId>futureframework-dal</artifactId>
+    <version>0.0.1</version>
+
+
 </project>

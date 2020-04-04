@@ -1,20 +1,28 @@
 package com.pikaer.futureframework.biz.impl;
 
 import com.pikaer.futureframework.biz.IMenuBiz;
+import com.pikaer.futureframework.dal.frameworkdb.dao.IMenuInfoDao;
 import com.pikaer.futureframework.entity.system.MenuInfo;
 import com.pikaer.futureframework.entity.system.MenuResponse;
 import com.pikaer.futureframework.entity.utils.ResponseCodeEnum;
 import org.assertj.core.util.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Component
 public class MenuBiz implements IMenuBiz {
+
+    @Autowired
+    private IMenuInfoDao menuInfoDao;
+
     @Override
     public MenuResponse getMenuList() {
         List<MenuInfo> menuList = new ArrayList<>();
+        int count=menuInfoDao.count();
         menuList.add(getSysMenu());
         menuList.add(getLogMenu());
         MenuResponse response = new MenuResponse();

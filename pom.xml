@@ -6,7 +6,6 @@
     <modules>
         <module>futureframework-dal</module>
         <module>futureframework-entity</module>
-        <module>futureframework-common</module>
         <module>futureframework-biz</module>
         <module>futureframework-web</module>
     </modules>
