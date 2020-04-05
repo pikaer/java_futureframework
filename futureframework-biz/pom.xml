@@ -24,12 +24,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.pikaer.futureframework</groupId>
-            <artifactId>futureframework-entity</artifactId>
-            <version>0.0.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>com.pikaer</groupId>
             <artifactId>futureframework-dal</artifactId>
             <version>0.0.1</version>

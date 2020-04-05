@@ -2,6 +2,8 @@ package com.pikaer.futureframework.biz.impl;
 
 import com.pikaer.futureframework.biz.IMenuBiz;
 import com.pikaer.futureframework.dal.frameworkdb.dao.IMenuInfoDao;
+import com.pikaer.futureframework.dal.frameworkdb.dao.impl.UserDao;
+import com.pikaer.futureframework.dal.frameworkdb.entity.UserInfoEntity;
 import com.pikaer.futureframework.entity.system.MenuInfo;
 import com.pikaer.futureframework.entity.system.MenuResponse;
 import com.pikaer.futureframework.entity.utils.ResponseCodeEnum;
@@ -18,8 +20,13 @@ public class MenuBiz implements IMenuBiz {
     @Autowired
     private IMenuInfoDao menuInfoDao;
 
+
     @Override
     public MenuResponse getMenuList() {
+
+//        UserInfoEntity user = new UserDao().selectUserById();
+//        System.out.println(user);
+
         List<MenuInfo> menuList = new ArrayList<>();
         menuList.add(getSysMenu());
         menuList.add(getLogMenu());
